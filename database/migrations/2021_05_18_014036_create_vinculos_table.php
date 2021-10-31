@@ -20,6 +20,7 @@ class CreateVinculosTable extends Migration
             $table->unsignedBigInteger('empresa_id');
             $table->boolean('status');
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('funcionario_id')->references('funcionario_id')->on('funcionarios');
             $table->foreign('cargo_id')->references('cargo_id')->on('cargos');

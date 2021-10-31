@@ -19,6 +19,7 @@ class CreateFuncionariosTable extends Migration
             $table->date('data_nascimento');
             $table->boolean('status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

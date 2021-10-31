@@ -1,0 +1,11 @@
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+}
+.font-title {
+    font-size: 1.7rem;
+}
+#nav-links:hover  {
+    transition-duration: .5s;
+    color: #dc3545 !important;
+}

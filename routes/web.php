@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\CargoController;
-use App\Http\Controllers\EmpresaController;
-use App\Http\Controllers\FuncionarioController;
-use App\Http\Controllers\VinculoController;
+use App\Http\Controllers\PositionController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\BondController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +19,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('site.index');
-});
+})->name('site.index');
 
-Route::resource('funcionarios', FuncionarioController::class)->parameters(['funcionarios' => 'employee'])->names('employees');
+// Funcionarios
+Route::resource('funcionarios', EmployeeController::class)->parameters(['funcionarios' => 'employee'])->names('employees');
+Route::post('ativa-funcionario/{employee}', 'App\Http\Controllers\EmployeeController@activateEmployee');
 
-Route::resource('cargos', CargoController::class)->parameters(['cargos' => 'position'])->names('positions');
+// Cargos
+Route::resource('cargos', PositionController::class)->parameters(['cargos' => 'position'])->names('positions');
+Route::post('ativa-cargo/{position}', 'App\Http\Controllers\PositionController@activatePosition');
 
-Route::resource('empresas', EmpresaController::class)->parameters(['empresas' => 'company'])->names('companies');
+// Empresas
+Route::resource('empresas', CompanyController::class)->parameters(['empresas' => 'company'])->names('companies');
+Route::post('ativa-empresa/{company}', 'App\Http\Controllers\CompanyController@activateCompany');
 
-Route::resource('vinculos', VinculoController::class)->parameters(['vinculos' => 'bond'])->names('bonds');
+// Vinculos
+Route::resource('vinculos', BondController::class)->parameters(['vinculos' => 'bond'])->names('bonds');
+Route::get('info-vinculo/{bond}', 'App\Http\Controllers\BondController@returnBondInfo');
+Route::post('ativa-vinculo/{bond}', 'App\Http\Controllers\BondController@activateBond');
+
