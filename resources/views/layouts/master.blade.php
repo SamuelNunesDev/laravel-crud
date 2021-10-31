@@ -33,23 +33,23 @@
           </a>
         </li>
         <li class="nav-item">
-          <a id="nav-link-vinculos" class="nav-link d-block py-2 px-4 btn {!! $title == 'Vinculos' ? 'text-danger' : 'text-secondary' !!}" id="nav-links" href="{!! route('bonds.index') !!}">
+          <a id="nav-link-vinculos" class="nav-link d-block py-2 px-4 btn {!! $title == 'Vinculos' ? 'text-danger' : 'text-secondary' !!}" href="{!! route('bonds.index') !!}">
             <i class="fa fa-link"></i> Vinculos
           </a>
         </li>
         <li class="nav-item">
-          <a id="nav-link-funcionarios" class="nav-link d-block py-2 px-4 btn {!! $title == 'Funcionarios' ? 'text-danger' : 'text-secondary' !!}" id="nav-links" href="{!! route('employees.index') !!}">
+          <a id="nav-link-funcionarios" class="nav-link d-block py-2 px-4 btn {!! $title == 'Funcionarios' ? 'text-danger' : 'text-secondary' !!}" href="{!! route('employees.index') !!}">
             <i class="fa fa-user"></i> Funcionarios
           </a>
         </li>
         <li class="nav-item">
-          <a id="nav-link-cargos" class="nav-link d-block py-2 px-4 btn {!! $title == 'Cargos' ? 'text-danger' : 'text-secondary' !!}" id="nav-links" href="{!! route('positions.index') !!}">
+          <a id="nav-link-cargos" class="nav-link d-block py-2 px-4 btn {!! $title == 'Cargos' ? 'text-danger' : 'text-secondary' !!}" href="{!! route('positions.index') !!}">
             <i class="fa fa-briefcase"></i> 
             Cargos
           </a>
         </li>
         <li class="nav-item">
-          <a id="nav-link-empresas" class="nav-link d-block py-2 px-4 btn {!! $title == 'Empresas' ? 'text-danger' : 'text-secondary' !!}" id="nav-links" href="{!! route('companies.index') !!}">
+          <a id="nav-link-empresas" class="nav-link d-block py-2 px-4 btn {!! $title == 'Empresas' ? 'text-danger' : 'text-secondary' !!}" href="{!! route('companies.index') !!}">
             <i class="fa fa-building"></i> Empresas
           </a>
         </li>

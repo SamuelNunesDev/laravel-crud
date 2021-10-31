@@ -5,7 +5,7 @@ body {
 .font-title {
     font-size: 1.7rem;
 }
-#nav-links:hover  {
+#nav-links:hover, #nav-link-vinculos:hover, #nav-link-funcionarios:hover, #nav-link-cargos:hover, #nav-link-empresas:hover {
     transition-duration: .5s;
     color: #dc3545 !important;
 }
