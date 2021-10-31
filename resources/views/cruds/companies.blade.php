@@ -71,6 +71,7 @@
                                 }
                                 return `<button class="btn btn-sm btn-success btn-ativar" value="${empresa_id}"><i class="fa fa-check"></i></button>`
                             }
+                        }
                     ],
                     "initComplete": function(settings, json) {
                         table.buttons().container().appendTo('#dt-companies_wrapper .col-md-4:eq(0)')
