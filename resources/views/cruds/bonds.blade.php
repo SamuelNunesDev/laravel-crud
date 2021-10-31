@@ -45,17 +45,10 @@
                     columns: [
                         {data: 'status', name: 'status',
                         'render': function(status, type, row) {
-                            switch(status) {
-                                case 0:
-                                    return '<span class="badge badge-danger py-1 px-2">INATIVO</span>'
-                                    break
-                                case 1:
-                                    return '<span class="badge badge-success py-1 px-2">ATIVO</span>'
-                                    break
-                                default:
-                                    return '<span class="badge badge-warning py-1 px-2">SEM INFORMAÇÕES</span>'
-                                    break
+                            if( !status ) {
+                                return '<span class="badge badge-danger py-1 px-2">INATIVO</span>'
                             }
+                            return '<span class="badge badge-success py-1 px-2">ATIVO</span>'
                         }
                     },
                         {data: 'id', name: 'id', visible: false},
@@ -78,14 +71,10 @@
                             }},
                         {data: 'id', name: 'id',
                             'render': function(id, type, row) {
-                                switch(row.status) {
-                                    case 1:
-                                        return `<button type="button" class="btn btn-sm btn-warning btn-editar" value="${id}"><i class="fa fa-edit text-light"></i></button><button class="btn btn-sm btn-danger btn-deletar" value="${id}"><i class="fa fa-times-circle"></i></button>`
-                                        break
-                                    case 0:
-                                        return `<button class="btn btn-sm btn-success btn-ativar" value="${id}"><i class="fa fa-check"></i></button>`
-                                        break
+                                if( row.status ) {
+                                    return `<button type="button" class="btn btn-sm btn-warning btn-editar" value="${id}"><i class="fa fa-edit text-light"></i></button><button class="btn btn-sm btn-danger btn-deletar" value="${id}"><i class="fa fa-times-circle"></i></button>`
                                 }
+                                    return `<button class="btn btn-sm btn-success btn-ativar" value="${id}"><i class="fa fa-check"></i></button>`
                             }
                         }
                     ],

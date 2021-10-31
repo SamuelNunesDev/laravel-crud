@@ -43,19 +43,11 @@
                     columns: [
                         {data: 'status', name: 'status',
                             'render': function(status, type, row) {
-                                switch(status) {
-                                    case 0:
-                                        return '<span class="badge badge-danger py-1 px-2">INATIVO</span>'
-                                        break
-                                    case 1:
-                                        return '<span class="badge badge-success py-1 px-2">ATIVO</span>'
-                                        break
-                                    default:
-                                        return '<span class="badge badge-warning py-1 px-2">SEM INFORMAÇÕES</span>'
-                                        break
+                                if( !status ) {
+                                    return '<span class="badge badge-danger py-1 px-2">INATIVO</span>'
                                 }
-                            }
-                    },
+                                return '<span class="badge badge-success py-1 px-2">ATIVO</span>'
+                        },
                         {data: 'empresa_id', name: 'empresa_id', visible: false},
                         {data: 'nome', name:'nome'},
                         {data: 'created_at', name: 'created_at', 
@@ -74,17 +66,11 @@
                             }},
                         {data: 'empresa_id', name: 'empresa_id',
                             'render': function(empresa_id, type, row) {
-                                switch(row.status) {
-                                    case 1:
-                                        return `<button type="button" class="btn btn-sm btn-warning btn-editar" value="${empresa_id}"><i class="fa fa-edit text-light"></i></button><button class="btn btn-sm btn-danger btn-deletar" value="${empresa_id}"><i class="fa fa-times-circle"></i></button>`
-                                        break
-                                    case 0:
-                                        return `<button class="btn btn-sm btn-success btn-ativar" value="${empresa_id}"><i class="fa fa-check"></i></button>`
-                                        break
+                                if( row.status ) {
+                                    return `<button type="button" class="btn btn-sm btn-warning btn-editar" value="${empresa_id}"><i class="fa fa-edit text-light"></i></button><button class="btn btn-sm btn-danger btn-deletar" value="${empresa_id}"><i class="fa fa-times-circle"></i></button>`
                                 }
-                            }
-                        }
-                    ],
+                                return `<button class="btn btn-sm btn-success btn-ativar" value="${empresa_id}"><i class="fa fa-check"></i></button>`
+                            },
                     "initComplete": function(settings, json) {
                         table.buttons().container().appendTo('#dt-companies_wrapper .col-md-4:eq(0)')
                         $('#add-buttons').append('<div class="form-inline"></div>')
