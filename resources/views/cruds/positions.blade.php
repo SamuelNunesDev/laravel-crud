@@ -67,14 +67,10 @@
                             }},
                         {data: 'cargo_id', name: 'cargo_id',
                             'render': function(cargo_id, type, row) {
-                                switch(row.status) {
-                                    case 't':
-                                        return `<button type="button" class="btn btn-sm btn-warning btn-editar" value="${cargo_id}"><i class="fa fa-edit text-light"></i></button><button class="btn btn-sm btn-danger btn-deletar" value="${cargo_id}"><i class="fa fa-times-circle"></i></button>`
-                                        break
-                                    case 'f':
-                                        return `<button class="btn btn-sm btn-success btn-ativar" value="${cargo_id}"><i class="fa fa-check"></i></button>`
-                                        break
+                                if( row.status ) {
+                                    return `<button type="button" class="btn btn-sm btn-warning btn-editar" value="${cargo_id}"><i class="fa fa-edit text-light"></i></button><button class="btn btn-sm btn-danger btn-deletar" value="${cargo_id}"><i class="fa fa-times-circle"></i></button>`
                                 }
+                                return `<button class="btn btn-sm btn-success btn-ativar" value="${cargo_id}"><i class="fa fa-check"></i></button>`
                             }
                         }
                     ],
