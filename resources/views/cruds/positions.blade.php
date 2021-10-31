@@ -47,6 +47,7 @@
                                     return '<span class="badge badge-danger py-1 px-2">INATIVO</span>'
                                 }
                                 return '<span class="badge badge-success py-1 px-2">ATIVO</span>'
+                            }
                         },
                         {data: 'cargo_id', name: 'cargo_id', visible: false},
                         {data: 'nome', name:'nome'},

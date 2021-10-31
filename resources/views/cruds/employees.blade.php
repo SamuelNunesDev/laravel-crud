@@ -79,7 +79,8 @@
                                 }
                                 return `<button class="btn btn-sm btn-success btn-ativar" value="${funcionario_id}"><i class="fa fa-check"></i></button>`
                             }
-                        },
+                        }
+                    ],
                     "initComplete": function(settings, json) {
                         table.buttons().container().appendTo('#dt-funcionarios_wrapper .col-md-4:eq(0)')
                         $('#add-buttons').append('<div class="form-inline"></div>')

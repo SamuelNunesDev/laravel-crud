@@ -70,7 +70,8 @@
                                     return `<button type="button" class="btn btn-sm btn-warning btn-editar" value="${empresa_id}"><i class="fa fa-edit text-light"></i></button><button class="btn btn-sm btn-danger btn-deletar" value="${empresa_id}"><i class="fa fa-times-circle"></i></button>`
                                 }
                                 return `<button class="btn btn-sm btn-success btn-ativar" value="${empresa_id}"><i class="fa fa-check"></i></button>`
-                            },
+                            }
+                    ],
                     "initComplete": function(settings, json) {
                         table.buttons().container().appendTo('#dt-companies_wrapper .col-md-4:eq(0)')
                         $('#add-buttons').append('<div class="form-inline"></div>')
