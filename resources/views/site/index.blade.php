@@ -11,11 +11,11 @@
 </head>
 <body>
     <div class="container mt-4 py-3">
-        <h1 class="text-center text-light" style="opacity: 0;">Escolha um projeto:</h1>
-        <hr class="bg-light my-4">
+        <h1 class="text-center text-danger" style="opacity: 0;">Escolha um projeto:</h1>
+        <hr class="bg-danger my-4">
         <div class="row mt-3 text-center">
             <div class="col-md-6">
-                <h2 class="my-4 text-light" style="opacity: 0;">first-laravel-crud</h2>
+                <h2 class="my-4 text-danger" style="opacity: 0;">first-laravel-crud</h2>
                 <div class="row justify-content-center mt-3">
                     <div class="card" style="width: 18rem; opacity: 0;">
                         <div class="card-body">
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="my-4 text-light" style="opacity: 0;">laravel-crud</h2>
+                <h2 class="my-4 text-danger" style="opacity: 0;">laravel-crud</h2>
                 <div class="row justify-content-center mt-3">
                     <div class="card" style="width: 18rem; opacity: 0;">
                         <div class="card-body">
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <hr class="bg-light mt-5">
+        <hr class="bg-danger mt-5">
     </div>
     <script src="{!! url(mix('site/js/script.js')) !!}"></script>
 </body>
