@@ -22,7 +22,7 @@
                     <div class="card" style="width: 18rem; opacity: 0;">
                         <div class="card-body">
                           <h5 class="card-title">Meu primeiro sistema web utilizando o Laravel</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">A idéia do projeto é criar 4 tabelas relacionadas, sendo uma delas uma tabela pivot.</h6>
+                          <h6 class="card-subtitle mb-2 text-muted">O projeto consiste em criar 4 tabelas relacionadas, sendo uma delas uma tabela pivot.</h6>
                           <p class="card-text">Você pode acessar o repositório para obter mais detalhes. Ou você pode acessar a aplicação e realizar testes.</p>
                           <a href="https://github.com/SamuelNunesDev/first-laravel-crud" target="_blank" class="card-link">
                             <i class="fa fa-code-branch"></i> Repositório
