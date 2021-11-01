@@ -1,3 +1,6 @@
+h1 {
+    font-family: 'Anton', sans-serif !important;
+}
 .card-body {
     min-height: 19rem;
 }
